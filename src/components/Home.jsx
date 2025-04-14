@@ -1,16 +1,17 @@
 import React, { useContext } from 'react';
 import { Icon } from '@iconify/react/dist/iconify.js'
+
+import { useNavigate } from 'react-router-dom';
 import myContext from '../context/myContext';
-import CompanyLogoSvg from './CompanyLogoSvg';
 
 const Home = () => {
+    const navigate = useNavigate();
     const context = useContext(myContext);
     const { dark } = context;
 
-
     return (
         <>
-            <section className="poppins bg-marketing text-white md:h-screen">
+            <section className={`poppins ${dark ? "bg-marketing-dark" : "bg-marketing"} text-white md:h-screen`}>
                 <div className="bg-triangle h-full" style={{ backdropFilter: 'blur(2px)' }}>
 
                     <div className="max-w-screen-xl mx-auto py-20">
@@ -20,7 +21,7 @@ const Home = () => {
                             <p className="text-xl md:text-2xl md:font-semibold my-4 md:my-8">Sollicitudin eros nulla mus donec a quisque convallis integer condimentum volutpat felis sed aliquet netus dolor dictumst pellentesque.</p>
                             <div className="flex flex-col md:flex-row gap-3">
                                 <button type="button" className='bg-indigo-600 hover:bg-indigo-800 px-4 py-2.5 rounded-lg transition-all'>Get a Free Quote</button>
-                                <button type="button" className='flex justify-center items-center gap-1 bg-transparent hover:bg-white/10 px-4 py-2.5 rounded-lg transition-all'>
+                                <button onClick={() => navigate("/about")} type="button" className='flex justify-center items-center gap-1 bg-transparent hover:bg-white/10 px-4 py-2.5 rounded-lg transition-all'>
                                     <span>Learn more</span>
                                     <span><Icon icon="flowbite:arrow-right-outline" width="24" height="24"></Icon></span>
                                 </button>
@@ -72,23 +73,23 @@ const Home = () => {
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-7">
-                        <div className={`${dark ? 'bg-neutral-800 dark-divShadow' : 'bg-white divShadow'} hover:bg-transparent p-10 h-full rounded-lg transition-all`}>
-                            <span className='text-indigo-700'><Icon icon="teenyicons:box-outline" width="60" height="60"></Icon></span>
+                        <div className={`border-2 ${dark ? 'bg-neutral-800 border-neutral-500' : 'bg-white divShadow'} hover:bg-transparent p-10 h-full rounded-lg transition-all`}>
+                            <span className={`${dark ? "text-neutral-500" : "text-indigo-700"}`}><Icon icon="teenyicons:box-outline" width="60" height="60"></Icon></span>
                             <h2 className="text-2xl my-5">Digital Strategy</h2>
                             <p className="text-[18px] text-slate-500">Ultrices dictum integer quam morbi adipiscing suspendisse neque vel egestas commodo sit felis consectetur integer vitae, at mattis turpis id</p>
                         </div>
-                        <div className={`${dark ? 'bg-neutral-800 dark-divShadow' : 'bg-white divShadow'} hover:bg-transparent p-10 h-full rounded-lg transition-all`}>
-                            <span className='text-indigo-700'><Icon icon="nimbus:marketing" width="60" height="60"></Icon></span>
+                        <div className={`border-2 ${dark ? 'bg-neutral-800 border-neutral-500' : 'bg-white divShadow'} hover:bg-transparent p-10 h-full rounded-lg transition-all`}>
+                            <span className={`${dark ? "text-neutral-500" : "text-indigo-700"}`}><Icon icon="nimbus:marketing" width="60" height="60"></Icon></span>
                             <h2 className="text-2xl my-5">Advertising</h2>
                             <p className="text-[18px] text-slate-500">Quis purus enim et quam eget sed tellus ut tellus sit lectus mauris suscipit lobortis lectus netus eros, habitasse maecenas diam pellentesque integer non</p>
                         </div>
-                        <div className={`${dark ? 'bg-neutral-800 dark-divShadow' : 'bg-white divShadow'} hover:bg-transparent p-10 h-full rounded-lg transition-all`}>
-                            <span className='text-indigo-700'><Icon icon="fluent:globe-28-filled" width="60" height="60"></Icon></span>
+                        <div className={`border-2 ${dark ? 'bg-neutral-800 border-neutral-500' : 'bg-white divShadow'} hover:bg-transparent p-10 h-full rounded-lg transition-all`}>
+                            <span className={`${dark ? "text-neutral-500" : "text-indigo-700"}`}><Icon icon="fluent:globe-28-filled" width="60" height="60"></Icon></span>
                             <h2 className="text-2xl my-5">Online Marketing</h2>
                             <p className="text-[18px] text-slate-500">Tellus, tristique euismod at fames lorem ut adipiscing amet gravida fermentum tellus ornare eget sed sit bibendum tincidunt diam, dignissim purus aenean</p>
                         </div>
-                        <div className={`${dark ? 'bg-neutral-800 dark-divShadow' : 'bg-white divShadow'} hover:bg-transparent p-10 h-full rounded-lg transition-all`}>
-                            <span className='text-indigo-700'><Icon icon="fluent:arrow-growth-20-filled" width="60" height="60"></Icon></span>
+                        <div className={`border-2 ${dark ? 'bg-neutral-800 border-neutral-500' : 'bg-white divShadow'} hover:bg-transparent p-10 h-full rounded-lg transition-all`}>
+                            <span className={`${dark ? "text-neutral-500" : "text-indigo-700"}`}><Icon icon="fluent:arrow-growth-20-filled" width="60" height="60"></Icon></span>
                             <h2 className="text-2xl my-5">Search Engine Optimization</h2>
                             <p className="text-[18px] text-slate-500">Id vel lectus amet id amet blandit diam arcu senectus ac commodo, sed est sagittis sed aliquam volutpat blandit quam vitae, rutrum euismod sit</p>
                         </div>

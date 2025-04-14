@@ -8,7 +8,7 @@ const About = () => {
 
     return (
         <>
-            <section className="poppins bg-[#121240] text-white">
+            <section className={`poppins ${dark ? "bg-[#121240] text-white" : "bg-slate-100 text-black"}`}>
                 <div className="bg-triangle h-full">
 
                     <div className="max-w-screen-xl mx-auto pt-40 pb-20">
@@ -52,7 +52,7 @@ const About = () => {
             </section>
 
 
-            {/* <img className='h-96 lg:h-full object-cover' src="https://websitedemos.net/digital-marketing-agency-04/wp-content/uploads/sites/865/2021/05/digital-marketing-agency-about-us-full-width-img.jpg" alt="" /> */}
+            <img className='h-96 lg:h-full object-cover' src="https://websitedemos.net/digital-marketing-agency-04/wp-content/uploads/sites/865/2021/05/digital-marketing-agency-about-us-full-width-img.jpg" alt="" />
 
 
 

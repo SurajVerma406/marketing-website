@@ -8,7 +8,7 @@ const Contact = () => {
 
     return (
         <div>
-            <section className="poppins bg-[#121240] text-white">
+            <section className={`poppins ${dark ? "bg-[#121240] text-white" : "bg-slate-100 text-black"}`}> 
                 <div className="bg-triangle h-full bg-triangle-2">
 
                     <div className="max-w-screen-xl mx-auto pt-40 pb-20">
@@ -21,7 +21,7 @@ const Contact = () => {
             </section>
 
 
-            <section className={`heebo ${dark ? 'bg-transparent' : 'bg-slate-100'} pt-20 pb-20 px-5 md:px-10`}>
+            <section className={`heebo ${dark ? 'bg-transparent' : 'bg-white'} pt-20 pb-20 px-5 md:px-10`}>
                 <div className="max-w-screen-xl mx-auto flex">
                     <div className="mx-auto grid-cols-1 grid lg:grid-cols-2 justify-center gap-5">
 
@@ -72,7 +72,7 @@ const Contact = () => {
 
 
 
-            <section className='heebo py-32 px-5 lg:px-10 bg-slate-800 text-white'>
+            <section className={`heebo py-32 px-5 lg:px-10 ${dark ? "bg-slate-800 text-white" : "bg-slate-200 text-black"}`}>
                 <div className="max-w-screen-xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-0">
                     <div className="order-1 lg:order-none lg:px-10">
                         <h1 className="text-[2.3rem] font-semibold">Ready to Take Your Internet Marketing to the next Level?</h1>
@@ -88,7 +88,7 @@ const Contact = () => {
                             <input type="text" className={`px-4 py-3 rounded-sm ${dark ? 'bg-slate-700' : 'bg-white'}`} id="email" placeholder='Email address' />
                             <textarea className={`px-4 py-3 rounded-sm ${dark ? 'bg-slate-700' : 'bg-white'}`} rows='5' placeholder='Your message'></textarea>
 
-                            <button type="submit" className='px-4 py-3 bg-indigo-600 hover:bg-indigo-800 w-fit rounded-md'>Get a Quote</button>
+                            <button type="submit" className={`text-white px-4 py-3 bg-indigo-600 hover:bg-indigo-800 w-fit rounded-md`}>Get a Quote</button>
                         </div>
                     </form>
                 </div>
